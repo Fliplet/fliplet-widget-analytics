@@ -1,4 +1,8 @@
 (function () {
+  if (Fliplet.Env.get('interact')) {
+    return; // do not track in edit mode  
+  }
+  
   // Screen data capture  
   Fliplet.App.Analytics.pageView({
     screen: Fliplet.Env.get('pageTitle')
