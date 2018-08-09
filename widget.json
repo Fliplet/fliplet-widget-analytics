@@ -1,0 +1,28 @@
+{
+  "name": "System: Analytics",
+  "package": "com.fliplet.analytics",
+  "version": "1.0.0",
+  "description": "<p>Enabling this will give you the tools to track your users.</p>",
+  "icon": "img/icon.png",
+  "tags": ["type:appComponent", "category:analytics"],
+  "provider_only": false,
+  "references": [],
+  "html_tag": "div",
+  "interface": {
+    "dependencies": [
+      "fliplet-core",
+      "fliplet-studio-ui"
+    ],
+    "assets": [
+      "js/interface.js"
+    ]
+  },
+  "build": {
+    "dependencies": [
+      "fliplet-core"
+    ],
+    "assets": [
+      "js/build.js"
+    ]
+  }
+}
