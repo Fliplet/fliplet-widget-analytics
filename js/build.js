@@ -2,10 +2,14 @@
   if (Fliplet.Env.get('interact')) {
     return; // do not track in edit mode  
   }
-  
-  // Screen data capture  
-  Fliplet.App.Analytics.pageView({
-    screen: Fliplet.Env.get('pageTitle')
+    
+  // Wait until app hooks have been fired to avoid tracking the page view
+  // when a security hook redirects the user to a different screen
+  Fliplet.Hooks.on('beforePageViewHooksSuccess', function () {
+    // Screen data capture  
+    Fliplet.App.Analytics.pageView({
+      screen: Fliplet.Env.get('pageTitle')
+    });
   });
   
   // Intercepts events
