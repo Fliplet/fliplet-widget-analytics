@@ -2,7 +2,7 @@
   "name": "System: Analytics",
   "package": "com.fliplet.analytics",
   "version": "1.0.0",
-  "description": "<p>Enabling this will give you the tools to track your users.</p>",
+  "description": "<p>Enable this add-on to track app usage data.</p>",
   "icon": "img/icon.png",
   "tags": ["type:appComponent", "category:analytics"],
   "provider_only": false,
@@ -14,6 +14,7 @@
       "fliplet-studio-ui"
     ],
     "assets": [
+      "css/interface.css",
       "js/interface.js"
     ]
   },
