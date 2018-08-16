@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "<p>Enable this add-on to track app usage data.</p>",
   "icon": "img/icon.png",
-  "tags": ["type:appComponent", "category:analytics"],
+  "tags": ["type:appComponent", "category:analytics", "beta:true"],
   "provider_only": false,
   "references": [],
   "html_tag": "div",
