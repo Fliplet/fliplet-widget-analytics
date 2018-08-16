@@ -4,7 +4,7 @@ $('form').submit(function (event) {
   event.preventDefault();
 
   Fliplet.Widget.save({
-    trackUsers: !$('#disable-user-tracking').is(':checked')
+    trackUser: !$('#disable-user-tracking').is(':checked')
   }).then(function () {
     Fliplet.Widget.complete();
   });
@@ -16,4 +16,4 @@ Fliplet.Widget.onSaveRequest(function () {
 });
 
 var data = Fliplet.Widget.getData();
-$('#disable-user-tracking').prop('checked', data.trackUsers === false);
+$('#disable-user-tracking').prop('checked', data.trackUser === false);
