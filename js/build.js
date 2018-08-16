@@ -11,9 +11,6 @@
     }
 
     var pageTitle = Fliplet.Env.get('pageTitle');
-    if (Fliplet.App.isPreview(true)) {
-      pageTitle += ' (Preview)';
-    }
 
     // Wait until app hooks have been fired to avoid tracking the page view
     // when a security hook redirects the user to a different screen
