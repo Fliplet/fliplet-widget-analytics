@@ -3,8 +3,8 @@
     return; // do not track in edit mode  
   }
 
-  $('[data-analytics-tracker-id]').each(function () {
-    var data = Fliplet.Widget.getData($(this).attr('data-analytics-tracker-id'));
+  $('[data-analytics-id]').each(function () {
+    var data = Fliplet.Widget.getData($(this).attr('data-analytics-id'));
 
     if (data.trackUser === false) {
       Fliplet.App.Analytics.disableUserTracking();
