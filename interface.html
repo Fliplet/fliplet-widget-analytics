@@ -1,8 +1,24 @@
 <div class="container-fluid">
   <form class="form-horizontal">
-    <div class="row no-gutters">
-      <div class="col-sm-12">
-        <p><i class="text-success fa fa-fw fa-lg fa-check-circle"></i> App usage tracking is enabled. Disable this add-on to stop usage tracking.</p>
+    <div class="row">
+      <div class="col-sm-12 col-sm-no-gutter">
+        <h2><small>User tracking</small></h2>
+        <p>By default, if a user logs into your app using Fliplet's security components, their email address will be tracked against their usage data.</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12 col-sm-no-gutter">
+        <div class="checkbox checkbox-icon">
+          <input type="checkbox" id="disable-user-tracking">
+          <label for="disable-user-tracking">
+            <span class="check"><i class="fa fa-check"></i></span> Disable user tracking
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-sm-no-gutter">
+        <p>If you'd like help configuring this feature please use live chat or email <a href="mailto:support@fliplet.com">support@fliplet.com</a>. You can also find documentation on how to <a href="https://developers.fliplet.com/API/fliplet-core.html#analytics" target="_blank">disable analytics for individual users</a>.</p>
       </div>
     </div>
   </form>
