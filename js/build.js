@@ -6,6 +6,10 @@
   $('[data-analytics-tracker-id]').each(function () {
     var data = Fliplet.Widget.getData($(this).attr('data-analytics-tracker-id'));
 
+    if (data.trackUser === false) {
+      Fliplet.App.Analytics.disableUserTracking();
+    }
+
     var pageTitle = Fliplet.Env.get('pageTitle');
     if (Fliplet.App.isPreview(true)) {
       pageTitle += ' (Preview)';
@@ -16,8 +20,7 @@
     Fliplet.Hooks.on('beforePageViewHooksSuccess', function () {
       // Screen data capture
       Fliplet.App.Analytics.pageView({
-        screen: pageTitle,
-        trackUser: data.trackUser
+        screen: pageTitle
       });
     });
     
@@ -27,8 +30,7 @@
         category: event.category,
         action: event.action,
         label: event.label,
-        screen: pageTitle,
-        trackUser: data.trackUser
+        screen: pageTitle
       });
     });
   });
