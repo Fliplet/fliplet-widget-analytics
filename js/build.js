@@ -24,8 +24,7 @@
       Fliplet.App.Analytics.event({
         category: event.category,
         action: event.action,
-        label: event.label,
-        screen: pageTitle
+        label: event.label
       });
     });
   });
