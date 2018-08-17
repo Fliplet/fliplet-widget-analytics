@@ -16,9 +16,7 @@
     // when a security hook redirects the user to a different screen
     Fliplet.Hooks.on('beforePageViewHooksSuccess', function () {
       // Screen data capture
-      Fliplet.App.Analytics.pageView({
-        screen: pageTitle
-      });
+      Fliplet.App.Analytics.pageView(pageTitle);
     });
     
     // Intercepts events
