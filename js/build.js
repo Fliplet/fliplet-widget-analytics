@@ -1,6 +1,6 @@
 (function () {
   if (Fliplet.Env.get('interact')) {
-    return; // do not track in edit mode  
+    return; // do not track in edit mode
   }
 
   $('[data-analytics-id]').each(function () {
@@ -18,14 +18,10 @@
       // Screen data capture
       Fliplet.App.Analytics.pageView(pageTitle);
     });
-    
+
     // Intercepts events
     Fliplet.Analytics.subscribe('trackEvent', function (event) {
-      Fliplet.App.Analytics.event({
-        category: event.category,
-        action: event.action,
-        label: event.label
-      });
+      Fliplet.App.Analytics.event(event);
     });
   });
 })();
