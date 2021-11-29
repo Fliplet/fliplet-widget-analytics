@@ -20,8 +20,8 @@
     });
 
     // Intercepts events
-    Fliplet.Analytics.subscribe('trackEvent', function (event) {
-      Fliplet.App.Analytics.event(event);
+    Fliplet.Analytics.subscribe('trackEvent', function (event, options) {
+      Fliplet.App.Analytics.event(event, options);
     });
   });
 })();
